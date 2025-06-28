@@ -24,8 +24,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/bthngcr/devops-case-app:latest
-            ghcr.io/bthngcr/devops-case-app:${{ github.sha }}
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.sha }}
       - name: Update GitOps repository
         shell: bash
         env:
@@ -39,7 +39,7 @@ jobs:
           rm -rf gitops
           
           # Clone repository using HTTPS URL without token
-          git clone https://github.com/Bthngcr/gitops.git gitops
+          git clone https://github.com/bthngcr/gitops.git gitops
           cd gitops
           
 
@@ -58,4 +58,4 @@ jobs:
           git commit -m "Update image to ${{ github.sha }}"
           
           # Push
-          git push -f https://${GIT_TOKEN}@github.com/Bthngcr/gitops.git main
+          git push -f https://${GIT_TOKEN}@github.com/bthngcr/gitops.git main
