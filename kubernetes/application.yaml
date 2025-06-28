@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Bthngcr/gitops.git
+    repoURL: https://github.com/bthngcr/gitops.git
     targetRevision: main
     path: kubernetes
   destination:
