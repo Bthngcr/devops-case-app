@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/bthngcr/gitops.git
     targetRevision: main
-    path: kubernetes
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: default
