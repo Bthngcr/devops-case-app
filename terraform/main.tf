@@ -40,7 +40,7 @@ module "eks" {
   subnet_ids = module.vpc.private_subnets
 
   eks_managed_node_groups = {
-    default = {
+    case-app = {
       min_size     = 1
       max_size     = 3
       desired_size = 2
